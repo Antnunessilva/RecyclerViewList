@@ -98,7 +98,7 @@ public class DerpAdapter extends RecyclerView.Adapter<DerpAdapter.derpHolder> {
             if (view.getId() == R.id.cont_item_root) {
                 itemClickCallback.onItemClick(getAdapterPosition());
             } else {
-itemClickCallback.onSecondaryIconClick(getAdapterPosition());
+            itemClickCallback.onSecondaryIconClick(getAdapterPosition());
             }
         }
     }

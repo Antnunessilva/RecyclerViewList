@@ -19,10 +19,12 @@ private static final String BUNDLE_EXTRAS = "BUNDLE_EXTRAS";
     private static final String EXTRA_QUOTE = "EXTRA_QUOTE";
     private static final String EXTRA_ATTR = "EXTRA_ATTR";
 
-    private RecyclerView mRecView;
-    private DerpAdapter mAdapter;
+    private RecyclerView mRecView; // recycler view
+    private DerpAdapter mAdapter; //adapter
+
 private ArrayList ListData;
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -30,11 +32,11 @@ private ArrayList ListData;
         ListData = (ArrayList) DerpData.getListData();
 
         mRecView = (RecyclerView)findViewById(R.id.rec_list); //encontrar a recycler view
-        //layoutmanager/gridlayoutmanager/staggeredlayoutmanager (estilo windows phone)
+        //layoutmanager/gridlayoutmanager/staggeredlayoutmanager (estilo windows phone) - definir layoutmanager
         mRecView.setLayoutManager(new LinearLayoutManager(this));
 
-        mAdapter = new DerpAdapter(DerpData.getListData(), this);
-        mRecView.setAdapter(mAdapter);
+        mAdapter = new DerpAdapter(DerpData.getListData(), this); //adaptador
+        mRecView.setAdapter(mAdapter); //definir adaptador na recycle
 
         mAdapter.setItemClickCallback(this); //gestão do item clicks aqui
     }
